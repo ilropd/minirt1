@@ -1,0 +1,31 @@
+gcc main.c inc/ft_atof.h inc/parsing_scene.h inc/utils.h src/Libft/ft_strlen.c src/parser/parsing_scene.c src/utils/ft_atof.c src/utils/utils_parsing.c src/utils/utils_str.c src/Libft/libft.h src/Libft/ft_isdigit.c src/Libft/ft_atoi.c src/parser/parsing_table.c src/init/init_unique.c inc/structures.h src/check/checker.c src/check/checker_ambient.c src/init/init_all.c src/check/checker_spot.c src/check/checker_camera.c src/init/init_figures.c src/check/checker_sphere.c src/check/checker_plane.c src/check/checker_cylinder.c src/check/check_limits.c src/utils/utils_free.c src/utils/utils_add.c src/utils/utils_exit.c
+
+
+int     arg_counter(char **table);
+float   ft_atof(char *str);
+int     ft_atoi(char *str);
+int     check_digit_cycle(char **table, char type, int start, int num_args);
+int     check_zerof_limit(char **table, int start, int num_args);
+int     check_vector_limit(char **table, int start, int num_args);
+int     check_ratio_limit(char **table, int start, int num_args);
+int     check_degree_limit(char **table, int start, int num_args);
+int     check_rgb_limit(char **table, int start, int num_args);
+
+void    init_scene(t_scene *scene);
+void    clear_scene(t_scene *scene);
+
+pl 0,0,0 0,1.0,0 255,0,225
+sp 0,0,20 20 255,0,0
+cy 50.0,0.0,20.6 0,0,1.0 14.2 21.42 10,0,255
+
+
+KEYS:
+ESC 65307
+SPACE 32
+ENTER 65293
+CONTROL_LEFT 65507
+CONTROL_RIGHT 65508
+ARROW_LEFT 65361 
+ARROW_UP 65362
+ARROW_RIGHT 65363
+ARROW_DOWN 65364
